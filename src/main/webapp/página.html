@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <title>TODO supply a title</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--cargamos el estilo de cascada de bootsstrap-->
+        <link rel="stylesheet" href="js/libs/twitter-bootstrap/css/bootstrap.css">
+        <script src="js/libs/jquery/jquery.js"></script>
+        <link rel="" href="js/libs/twitter-bootstrap/css/bootstrap.css">
+        <script src="js/pagina.js"></script>
+        <link rel="stylesheet" href="mi-estilo.css">
+        <script>
+             $(document).ready(function(){
+             $("#guardar-trabajador").click(function(){
+                    $.ajax({ 
+                        url:'guardar-trabajador',
+                        method:'post',
+                        data:{
+                            nombre:$("#nombre").val(),
+                            paterno:$("#paterno").val(),
+                            materno:$("#materno").val(),
+                        } ,
+                        success:function(resultado){
+                            $("#resultado-guardar-trabajador").html(resultado);
+                            
+                        } 
+                    
+                          });
+                          });
+                          });
+                          
+                          
+    
+    
+    
+    
+    
+             
+        </script>
+           
+    </head>
+    <body>
+    
+        <label>Nombre</label>
+        <input type="text" class="form-control" id="nombre"/>
+        
+        <label>A.paterno</label>
+        <input type="text" class="form-control" id="paterno"/>
+        
+        <label>A.materno</label>
+        <input type="text" class="form-control" id="materno"/>
+        
+        
+        <a href="#" id="Guardar-Trabajador"  class="btn mi-color">Guardar Trabajador</a>
+        <div id="resultado-guardar-trabajador"></div>
+        
+        
+        
+        
+        
+    </body>
+</html>
